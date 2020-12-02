@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Meshitero</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+  <div class="header">
+  <div class="inner-header">
+    <h1 class="title"><a href="/">Meshitero</a></h1>
+    <li class='new-post'>
+      <%= link_to "投稿する", new_tweet_path, class:"post-btn"%>
+    </li>
+  </div>
+</div>
+
+    <%= yield %>
+
+  <div class="footer">
+    <p class="copyright">Copyright © Meshitero All rights reserved.</p>
+  </div>
+  </body>
+</html>
