@@ -1,4 +1,6 @@
 class TweetsController < ApplicationController
+  before_action :set_tweet, only: [:edit, :update, :show, :destroy]
+
 
   def index
     @tweets = Tweet.all.order(created_at: :desc)
@@ -18,6 +20,24 @@ class TweetsController < ApplicationController
     end
   end
 
+  def show
+  end
+
+  def edit
+  end
+
+  def update
+    if @tweet.update(tweet_params)
+      redirect_to tweet_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    redirect_to root_path if @tweet.destroy
+  end
+
   def search
     return nil if params[:keyword] == ""
     tag = Tag.where(['name LIKE ?', "%#{params[:keyword]}%"] )
@@ -28,6 +48,10 @@ class TweetsController < ApplicationController
 
   def tweet_params
     params.require(:tweets_tag).permit(:message, :name, :image)
+  end
+
+  def set_tweet
+    @tweet = Tweet.find(params[:id])
   end
 
 end

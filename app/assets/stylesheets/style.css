@@ -1,0 +1,275 @@
+/* リセット */
+
+*{
+  box-sizing: border-box;
+}
+
+html,
+body,
+ul,
+li,
+h1,
+h2,
+p,
+div {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN W3", sans-serif;
+  color: #3b4043;
+}
+
+li {
+  list-style: none;
+}
+
+
+
+a {
+  text-decoration: none;
+  color: #3b4043;
+}
+
+/* ヘッダー */
+
+header {
+  background-color: rgb(235, 201, 91);
+  margin-bottom: 48px;
+  height: 15vh;
+}
+
+.inner{
+  width: 100vw;
+  margin: 0 auto;
+}
+
+.nav{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.logo {
+  font-weight: bold;
+}
+
+
+.post-btn{
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 0.8em;
+  color: tomato;
+  text-decoration: none;
+  user-select: none;
+  border: 1px solid tomato;
+  border-radius: 3px;
+  transition: 0.4s ease;
+}
+
+.post-btn:hover {
+  background: tomato;
+  color: #fff;
+}
+
+.nav-logout {
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 0.8em;
+  color: tomato;
+  text-decoration: none;
+  user-select: none;
+}
+
+.nav-logout:hover {
+  opacity: 0.5;
+}
+
+/* ツイート */
+
+.main{
+  width: 100%;
+  height: 90vh;
+  background-color: #f8f8f8f8;
+  background-image: url("restaurant-icon.png");
+  background-blend-mode:lighten;
+  background-repeat: space;
+  display: flex;
+}
+
+.card-wrapper{
+  width: 50%;
+  height: 100%;
+  background-color: white;
+  white-space: nowrap;
+  overflow-y: scroll;
+}
+
+.card{
+  width: 100%;
+  height: 20%;
+  margin-top: 10px;
+  padding: 0 20px;
+}
+
+
+.card-title {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.card-summary {
+  font-size: 20px;
+}
+
+.card-user{
+  display: block;
+  font-size: 12px;
+  color: #999;
+  text-align: right;
+  text-decoration: underline;
+}
+
+
+
+.card-summary{
+  display: block;
+  font-size: 20px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.tag-list {
+  display: block;
+  font-size: 12px;
+  color: #999;
+  text-align: right;
+  text-decoration: underline;
+}
+
+/*投稿フォーム*/
+.form-wrap{
+  min-height: calc(100vh - 161px);
+}
+
+.form-text {
+  width: 50%;
+}
+
+.field {
+  margin: 15px 0;
+}
+
+.actions{
+  margin-top: 40px;
+}
+
+.form-btn {
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 0.8em;
+  color:tomato;
+  text-decoration: none;
+  user-select: none;
+  background: #fff;
+  border: 1px tomato solid;
+  border-radius: 3px;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
+  transition: 0.2s ease;
+}
+
+.form-btn:hover {
+  color: #fff;
+  background: tomato;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+
+.message-form{
+  width: 30%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+
+.tag-field{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.input-tag{
+  padding-left: 10px;
+}
+
+.child{
+  border-bottom:#666 1px solid;
+  margin: 10px 0;
+  padding-left: 11px;
+}
+
+/* 詳細ページ */
+.tweet-wrapper{
+  min-height: calc(100vh - 161px);
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.tweet-image {
+  width: 40%;
+  margin: 0 auto;
+  padding: 16px 0;
+}
+
+.tweet-detail{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+
+.tweet-manage {
+  display: flex;
+  justify-content: center;
+  padding-top: 16px;
+}
+
+.tweet-btn{
+  display: block;
+  padding: 0.4em 1.6em;
+  font-size: 0.4em;
+  color: tomato;
+  text-decoration: none;
+  user-select: none;
+  border: 1px tomato solid;
+  border-radius: 3px;
+  transition: 0.4s ease;
+  margin: 0 4px;
+}
+
+.tweet-btn:hover {
+  color: #fff;
+  background: tomato;
+}
+
+
+
+/* フッダー */
+
+.footer {
+  background-color: rgb(235, 201, 91);
+  padding: 3vh 0;
+}
+
+.copyright {
+  text-align: center;
+  color: #fff;
+  font-size: 10px;
+}

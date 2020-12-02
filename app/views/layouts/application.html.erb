@@ -11,14 +11,21 @@
 
   <body>
 
-  <div class="header">
-  <div class="inner-header">
-    <h1 class="title"><a href="/">Meshitero</a></h1>
-    <li class='new-post'>
-      <%= link_to "投稿する", new_tweet_path, class:"post-btn"%>
-    </li>
-  </div>
-</div>
+<header class="header">
+    <div class="inner">
+      <div class="nav">
+        <div class="nav-left">
+          <%= link_to "Meshitero.", root_path, class: "logo" %>
+        </div>
+
+      <div class='nav-right'>
+        <%#= link_to "ログアウト", destroy_user_session_path, class: "nav-logout", method: :delete %>
+        <%= link_to "投稿する", new_tweet_path, class:"post-btn"%>
+
+       </div>
+      </div>
+    </div>
+</header>
 
     <%= yield %>
 

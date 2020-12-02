@@ -1,0 +1,26 @@
+<%= form_with model: @tweet, url: tweets_path, class:'form-wrap', local: true do |f| %>
+
+    <div class="field">
+      <%= f.label :image, "グルメ画像"%><br />
+      <%= f.file_field :image, id: "message-image" %>
+    </div>
+    <div id="image-list"></div>
+
+    <div class="field">
+      <%= f.label :message,  "メッセージ" %><br />
+      <%= f.text_area :message, class:"form-text" %>
+    </div>
+
+    <div class="tag-field", id='tag-field'>
+      <%= f.label :name, "タグ" %><br />
+      <%= f.text_field :name, class:"form-text" %>
+    </div>
+
+    <div id="search-result">
+    </div>
+
+  <div class="actions">
+    <%= f.submit "送信する", class: "form-btn" %>
+  </div>
+
+<% end %>

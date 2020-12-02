@@ -1,21 +1,17 @@
-
-<div class="main">
-  <div class="message-wrap">
+<div class="card">
     <% @tweets.each do |tweet|%>
-      <div class="message"> 
-      <%= image_tag tweet.image.variant(resize: '800x600'), class: "message-image" if tweet.image.attached? %>
-        <p class="text">
-          <%= tweet.message %>
-        </p>
-
+    <div class="card-image">
+      <%= link_to image_tag(tweet.image), tweet_path(tweet.id) if tweet.image.attached? %>
+    </div>
+      <p class="card-summary"> 
+      <%= tweet.message %>
+      </p>
         <ul class="tag">
           <li class="tag-list">
-            <%tweet.tags.each do |tag| %>
+            <% tweet.tags.each do |tag| %>
               #<%=tag.name%>
             <%end%>
           </li>
         </ul>
-      </div>
     <%end%>
-  </div>
 </div>
