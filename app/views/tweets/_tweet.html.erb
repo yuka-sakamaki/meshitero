@@ -1,5 +1,5 @@
-<div class="card">
-    <% @tweets.each do |tweet|%>
+<% @tweets.each do |tweet|%>
+    <div class="card">
     <div class="card-image">
       <%= link_to image_tag(tweet.image), tweet_path(tweet.id) if tweet.image.attached? %>
     </div>
@@ -13,5 +13,5 @@
             <%end%>
           </li>
         </ul>
+        </div>
     <%end%>
-</div>

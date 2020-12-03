@@ -17,4 +17,9 @@ class TweetsTag
     TweetTagRelation.create(tweet_id: tweet.id, tag_id: tag.id)
   end
 
+  def find
+    tweet = Tweet.find(params[:id])
+    tag = Tag.find(params[:id])
+  end
+
 end

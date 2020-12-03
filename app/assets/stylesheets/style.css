@@ -37,7 +37,7 @@ a {
 header {
   background-color: rgb(235, 201, 91);
   margin-bottom: 48px;
-  height: 15vh;
+  height: 10vh;
 }
 
 .inner{
@@ -97,19 +97,22 @@ header {
   background-blend-mode:lighten;
   background-repeat: space;
   display: flex;
+  justify-content: center;
 }
 
 .card-wrapper{
   width: 50%;
-  height: 100%;
+  height: 80%;
   background-color: white;
-  white-space: nowrap;
-  overflow-y: scroll;
+  overflow: auto;
+  display: inline-block;
+  justify-content: center;
 }
 
 .card{
+  align-items: center;
   width: 100%;
-  height: 20%;
+  height: 100%;
   margin-top: 10px;
   padding: 0 20px;
 }
@@ -122,10 +125,6 @@ header {
   font-weight: bold;
 }
 
-.card-summary {
-  font-size: 20px;
-}
-
 .card-user{
   display: block;
   font-size: 12px;
@@ -134,9 +133,12 @@ header {
   text-decoration: underline;
 }
 
+.card-image {
+  border-top: solid 2px gray;
+  padding-top: 10px;
+}
 
-
-.card-summary{
+div.card div.card-summary{
   display: block;
   font-size: 20px;
   margin-bottom: 8px;
@@ -217,8 +219,7 @@ header {
 /* 詳細ページ */
 .tweet-wrapper{
   min-height: calc(100vh - 161px);
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 16px;
   text-align: center;
 }
 
@@ -232,7 +233,6 @@ header {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 8px;
 }
 
 .tweet-manage {

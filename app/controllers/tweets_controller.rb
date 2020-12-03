@@ -1,5 +1,5 @@
 class TweetsController < ApplicationController
-  before_action :set_tweet, only: [:edit, :update, :show, :destroy]
+  before_action :set_tweet, only: [:edit, :show, :destroy, :update]
 
 
   def index
@@ -28,7 +28,7 @@ class TweetsController < ApplicationController
 
   def update
     if @tweet.update(tweet_params)
-      redirect_to tweet_path
+      redirect_to root_path
     else
       render :edit
     end
