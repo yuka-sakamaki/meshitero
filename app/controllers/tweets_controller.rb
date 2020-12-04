@@ -4,6 +4,16 @@ class TweetsController < ApplicationController
 
   def index
     @tweets = Tweet.all.order(created_at: :desc)
+
+    if params[:tag_id]
+      @tag_list = Tag.all
+      @tag = Tag.find(params[:tag_id])
+      @tweets = Tweet.all.order(created_at: "DESC")
+    else
+      @tag_list = Tag.all
+      @tweets = Tweet.all.order(created_at: "DESC")
+    end
+
   end
 
   def new
@@ -12,9 +22,10 @@ class TweetsController < ApplicationController
 
   def create
     @tweet = TweetsTag.new(tweet_params)
-    if @tweet.valid?
-      @tweet.save
-      return redirect_to root_path
+    tag_list = params[:name]
+    if @tweet.save
+      @tweet.save_tweets(tag_list)
+      redirect_to root_path
     else
       render "new"
     end
@@ -24,10 +35,13 @@ class TweetsController < ApplicationController
   end
 
   def edit
+    @tag_list = @tweet.tags.pluck(:name).join(',')
   end
 
   def update
+    tag_list = params[:tweet][:name].split(',')
     if @tweet.update(tweet_params)
+      @tweet.save_tweets(tag_list)
       redirect_to root_path
     else
       render :edit
@@ -40,8 +54,8 @@ class TweetsController < ApplicationController
 
   def search
     return nil if params[:keyword] == ""
-    tag = Tag.where(['name LIKE ?', "%#{params[:keyword]}%"] )
-    render json:{ keyword: tag }
+    tag_list = Tag.where(['name LIKE ?', "%#{params[:keyword]}%"] )
+    render json:{ keyword: tag_list }
   end
 
   private

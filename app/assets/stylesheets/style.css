@@ -35,25 +35,26 @@ a {
 /* ヘッダー */
 
 header {
-  background-color: rgb(235, 201, 91);
-  margin-bottom: 48px;
-  height: 10vh;
-}
-
-.inner{
-  width: 100vw;
-  margin: 0 auto;
-}
-
-.nav{
   width: 100%;
+  padding: 10px 4% 5px;
+  background-color:rgb(235, 201, 91);
+  position: fixed;
+  top: 0;
   display: flex;
-  justify-content: space-between;
-  font-weight: bold;
+  align-items: center;
+}
+h1 {
+  margin:0;padding:0;
+  font-size:20px;
 }
 
-.logo {
-  font-weight: bold;
+.nav {
+  display: flex;
+}
+
+.nav-right {
+  margin: 0 0 0 auto;
+  display: flex;
 }
 
 
@@ -64,7 +65,7 @@ header {
   color: tomato;
   text-decoration: none;
   user-select: none;
-  border: 1px solid tomato;
+  border: 1px tomato solid;
   border-radius: 3px;
   transition: 0.4s ease;
 }
@@ -74,34 +75,50 @@ header {
   color: #fff;
 }
 
-.nav-logout {
-  display: inline-block;
-  padding: 0.4em 1.6em;
-  font-size: 0.8em;
-  color: tomato;
-  text-decoration: none;
-  user-select: none;
+
+/* ヘッダー２ */
+
+.title-contents {
+  width: 100vw;
+  height: 60vh;
+  background-image: image-url('header01.JPG');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 5vh 15vw;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
 }
 
-.nav-logout:hover {
-  opacity: 0.5;
-}
 
 /* ツイート */
 
 .main{
   width: 100%;
-  height: 90vh;
   background-color: #f8f8f8f8;
   background-image: url("restaurant-icon.png");
   background-blend-mode:lighten;
   background-repeat: space;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+}
+
+.top {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.top2 {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .card-wrapper{
-  width: 50%;
+  width: 60%;
   height: 80%;
   background-color: white;
   overflow: auto;
@@ -137,6 +154,7 @@ header {
   border-top: solid 2px gray;
   padding-top: 10px;
 }
+
 
 div.card div.card-summary{
   display: block;
@@ -238,7 +256,7 @@ div.card div.card-summary{
 .tweet-manage {
   display: flex;
   justify-content: center;
-  padding-top: 16px;
+  padding-top: 20px;
 }
 
 .tweet-btn{
@@ -264,8 +282,10 @@ div.card div.card-summary{
 /* フッダー */
 
 .footer {
+  width: 100%;
   background-color: rgb(235, 201, 91);
   padding: 3vh 0;
+  position: fixed;
 }
 
 .copyright {

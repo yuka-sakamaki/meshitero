@@ -1,15 +1,5 @@
-<main class="main">
-  <div class="inner">
+<div class="main">
     <div class="tweet-wrapper">
-      <%#= link_to "by#{@prototype.user.name}", user_path(@prototype.user.id), class: :prototype__user %>
-      <%# プロトタイプの投稿者とログインしているユーザーが同じであれば以下を表示する %>
-      <%# if user_signed_in? && current_user.id == @prototype.user_id %>
-        <div class="tweet-manage">
-          <%= link_to "編集する", edit_tweet_path(@tweet.id), class: "tweet-btn" %>
-          <%= link_to "削除する", tweet_path(@tweet.id),method: :delete, class: "tweet-btn" %>
-        </div>
-        <%# end %>
-      <%# // プロトタイプの投稿者とログインしているユーザーが同じであれば上記を表示する %>
       <div class="tweet-image">
         <%= image_tag @tweet.image %>
       </div>
@@ -27,9 +17,9 @@
           </p>
         </div>
       </div>
-
-      
-      
+              <div class="tweet-manage">
+               <%= link_to "編集する", edit_tweet_path(@tweet.id), class: "tweet-btn" %>
+               <%= link_to "削除する", tweet_path(@tweet.id),method: :delete, class: "tweet-btn" %>
+              </div>
     </div>
-  </div>
-</main>
+</div>
