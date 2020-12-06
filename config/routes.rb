@@ -5,4 +5,5 @@ Rails.application.routes.draw do
       get 'search'
     end
   end
+  get '/tweet/tag/:name', to: "tweets#tag"
 end

@@ -3,45 +3,35 @@ class TweetsController < ApplicationController
 
 
   def index
-    @tweets = Tweet.all.order(created_at: :desc)
-
-    if params[:tag_id]
-      @tag_list = Tag.all
-      @tag = Tag.find(params[:tag_id])
-      @tweets = Tweet.all.order(created_at: "DESC")
-    else
-      @tag_list = Tag.all
-      @tweets = Tweet.all.order(created_at: "DESC")
-    end
-
+    @tweets = Tweet.order(created_at: :desc)
   end
 
   def new
-    @tweet = TweetsTag.new
+    @tweet = Tweet.new
   end
 
   def create
-    @tweet = TweetsTag.new(tweet_params)
-    tag_list = params[:name]
+    @tweet = Tweet.new(tweet_params)
     if @tweet.save
-      @tweet.save_tweets(tag_list)
       redirect_to root_path
     else
       render "new"
     end
   end
 
+  def tag
+    @tag = Tag.find(params[:tag_id])
+    @tweets = @tag.tweets.build
+  end
+
   def show
   end
 
   def edit
-    @tag_list = @tweet.tags.pluck(:name).join(',')
   end
 
   def update
-    tag_list = params[:tweet][:name].split(',')
-    if @tweet.update(tweet_params)
-      @tweet.save_tweets(tag_list)
+    if @tweets_tag.update(tweet_params)
       redirect_to root_path
     else
       render :edit
@@ -54,14 +44,14 @@ class TweetsController < ApplicationController
 
   def search
     return nil if params[:keyword] == ""
-    tag_list = Tag.where(['name LIKE ?', "%#{params[:keyword]}%"] )
-    render json:{ keyword: tag_list }
+    tag = Tag.where(['name LIKE ?', "%#{params[:keyword]}%"] )
+    render json:{ keyword: tag }
   end
 
   private
 
   def tweet_params
-    params.require(:tweets_tag).permit(:message, :name, :image)
+    params.require(:tweet).permit(:message, :name, :hashname, :image, tag_ids:[])
   end
 
   def set_tweet

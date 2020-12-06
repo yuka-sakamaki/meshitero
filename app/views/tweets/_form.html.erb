@@ -1,4 +1,4 @@
-<%= form_with(model: @tweet, url: tweets_path, local: true) do |f| %>
+<%= form_with(model: @tweet, local: true) do |f| %>
 
 <div class="form-wrap">
 
@@ -9,14 +9,13 @@
     <div id="image-list"></div>
 
     <div class="field">
-      <%= f.label :message,  "メッセージ" %><br />
-      <%= f.text_area :message, class:"form-text" %>
+      <p>コメントを入力してください</p>
+      <%= f.text_area :message, class:"form-text"%>
     </div>
 
-    <div class="tag-field", id='tag-field'>
-      <%= f.label :name, "タグ" %><br />
-      <%= f.text_field :name, value: @tag_list, class:"form-text" %>
-    </div>
+    <div class="field">
+      <p>タグを入力してください</p>
+      <%= f.text_field :hashname, class:"form-text", id:'tag-field' %>
 
     <div id="search-result">
     </div>
@@ -24,7 +23,5 @@
   <div class="actions">
     <%= f.submit "送信する", class: "form-btn" %>
   </div>
-
 </div>
-
 <% end %>

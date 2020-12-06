@@ -20,13 +20,6 @@
          <%= render partial: 'tweet', locals: {tweet: @tweet} %>
         </div>
     </div>
-
-    <div class="top2">
-    <h1>タグ一覧</h1>
-       <% @tag_list.each do |list| %>
-        <p><%= link_to list.name, tweets_path(tag_id: list.id)%></p>
-       <% end %>
-    </div>
 </div>
 
 

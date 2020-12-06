@@ -8,9 +8,7 @@
       </p>
         <ul class="tag">
           <li class="tag-list">
-            <% tweet.tags.each do |tag| %>
-              #<%=tag.name%>
-            <%end%>
+            <%= render_with_tags(tweet.hashname) %>
           </li>
         </ul>
     </div>
