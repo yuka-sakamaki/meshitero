@@ -17,7 +17,9 @@
     <div class="top1">
     <h1>投稿一覧</h1>
         <div class="card-wrapper">
+        <%#= link_to @tweets, tweets_path(tweet.id), method: :get do %>
          <%= render partial: 'tweet', locals: {tweet: @tweet} %>
+        <%# end %>
         </div>
     </div>
 </div>

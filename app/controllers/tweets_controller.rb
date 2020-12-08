@@ -20,8 +20,8 @@ class TweetsController < ApplicationController
   end
 
   def tag
-    @tag = Tag.find(params[:tag_id])
-    @tweets = @tag.tweets.build
+      @tag = Tag.find_by(name: params[:name])
+      @tweets = @tag.tweets
   end
 
   def show
@@ -31,7 +31,7 @@ class TweetsController < ApplicationController
   end
 
   def update
-    if @tweets_tag.update(tweet_params)
+    if @tweet.update(tweet_params)
       redirect_to root_path
     else
       render :edit
