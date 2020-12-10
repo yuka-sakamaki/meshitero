@@ -74,7 +74,6 @@ a {
   background-color: whitesmoke;
 }
 
-
 .card-summary {
   display: block;
   font-size: 20px;
@@ -85,14 +84,16 @@ a {
 
 .card-user{
   display: block;
-  font-size: 12px;
+  font-size: 20px;
+  font-weight: bold;
   color: #999;
-  text-align: right;
+  text-align: left;
   text-decoration: underline;
+  padding-left: 20px;
 }
 
 .card-image {
-  margin: 0 auto;
+  margin: 30px auto 0;
 }
 
 .tag-list {

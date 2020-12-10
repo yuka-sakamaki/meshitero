@@ -1,5 +1,6 @@
 <% @tweets.each do |tweet|%>
     <div class="card">
+      <%= link_to "#{tweet.user.nickname}", user_path(tweet.user.id), class:"card-user" %>
       <div class="card-image">
         <%= link_to image_tag(tweet.image), tweet_path(tweet.id) if tweet.image.attached? %>
       </div>
@@ -11,5 +12,6 @@
             <%= render_with_tags(tweet.hashname) %>
           </li>
         </ul>
+        <%#= link_to "by#{tweet.user_id.nickname}", user_path(tweet.user.id), class:"card-user" %>
     </div>
 <%end%>

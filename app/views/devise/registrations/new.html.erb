@@ -1,0 +1,75 @@
+<%= render "shared/header"%>
+
+<div class="main">
+  <div  class="top">
+    <div class="form-wrapper">
+      <h2 class="page-heading">新規ユーザー登録</h2>
+
+    <%= form_with model: @user, url: user_registration_path, local: true do |f| %>
+    <%= render "devise/shared/error_messages", model: f.object %>
+
+    <div class="form-wrap">
+
+    <div class="field">
+      <%= f.label :nickname, "ニックネームを入力してください" %><br />
+      <%= f.text_field :nickname, class:"form-text" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :email, "メールアドレスを入力してください" %><br />
+      <%= f.email_field :email, class:"form-text" %>
+    </div>
+
+
+   <div class="field">
+      <%= f.label :password, "パスワードを入力してください(6文字以上の半角英数字)" %><br />
+      <%= f.password_field :password, class:"form-text" %>
+   </div>
+
+   <div class="field">
+      <%= f.label :password_confirmation, "パスワード(確認用)"%><br />
+      <%= f.password_field :password_confirmation, class:"form-text" %>
+   </div>
+
+    <div class="field">
+      <%= f.label :restaurant_name, "お勤めのレストラン名(任意)" %><br />
+      <%= f.text_field :restaurant_name, class:"form-text" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :postal_code, "お勤めのレストランの郵便番号(任意) 例:123−4567" %><br />
+      <%= f.text_field :postal_code, class:"form-text" %>
+    </div>
+
+
+    <div class="field">
+      <%= f.label :prefecture, "お勤めのレストランの都道府県(任意)" %><br />
+      <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {include_blank: "--"}, {class:"form-text"}) %>
+    </div>
+
+    <div class="field">
+      <%= f.label :city, "お勤めのレストランの市町村(任意)" %><br />
+      <%= f.text_field :city, class:"form-text" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :address, "お勤めのレストランの番地(任意)" %><br />
+      <%= f.text_field :address, class:"form-text" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :phone_number, "お勤めのレストランの電話番号(任意) 例:0312345678", maxlength:"11" %><br />
+      <%= f.text_field :phone_number, class:"form-text" %>
+    </div>
+
+
+    <div class="actions">
+      <%= f.submit "登録する", class: "form-btn" %>
+    </div>
+
+       </div>
+     <% end %>
+    </div>
+  </div>
+</div>
+

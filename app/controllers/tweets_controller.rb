@@ -1,9 +1,9 @@
 class TweetsController < ApplicationController
   before_action :set_tweet, only: [:edit, :show, :destroy, :update]
-
+  before_action :move_to_index, except: [:index, :show]
 
   def index
-    @tweets = Tweet.order(created_at: :desc)
+    @tweets = Tweet.order(created_at: :desc).includes(:user)
   end
 
   def new
@@ -17,11 +17,6 @@ class TweetsController < ApplicationController
     else
       render "new"
     end
-  end
-
-  def tag
-      @tag = Tag.find_by(name: params[:name])
-      @tweets = @tag.tweets
   end
 
   def show
@@ -48,14 +43,28 @@ class TweetsController < ApplicationController
     render json:{ keyword: tag }
   end
 
+
+  def tag
+    @tag = Tag.find_by(name: params[:name])
+    @tweets = @tag.tweets
+  end
+
+
   private
 
   def tweet_params
-    params.require(:tweet).permit(:message, :name, :hashname, :image, tag_ids:[])
+    params.require(:tweet).permit(:message, :name, :hashname, :image, tag_ids:[]).merge(user_id: current_user.id)
   end
+
 
   def set_tweet
     @tweet = Tweet.find(params[:id])
+  end
+
+  def move_to_index
+    unless user_signed_in?
+      redirect_to action: :index
+    end
   end
 
 end

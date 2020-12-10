@@ -1,0 +1,12 @@
+<%= render "shared/header"%>
+<div class="main">
+  <div class="top">
+    <div class="form-wrapper">
+      <h2 class="page-heading">
+        <%= @nickname %>さんの投稿一覧
+      </h2>
+      <%= render partial: 'tweets/tweet', locals: {tweet: @tweet} %>
+    </div>
+  </div>
+</div>
+<%= render "shared/footer" %>

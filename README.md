@@ -8,6 +8,8 @@
 ## :globe_with_meridians: URL
 
 ## :key: Accounts 
+  <!-- email: test@test
+  pass:  test1234 -->
 
 ## :hand: Usage
   - First, create a user account. If you work at a restaurant, don't forget to enter the restaurant information.（まずはユーザーアカウントを作成してください。レストランで働いている方はレストラン情報の入力もお忘れなく。）
@@ -47,15 +49,18 @@
 ## :package: Database
 
 ### tweets テーブル
-| Column   | Type  | Options     |
-| -------- | ----- | ----------- |
-| message  | text  | null: false |
-| hashname | text  | null: false |
+| Column   | Type       | Options                        |
+| -------- | ---------- | ------------------------------ |
+| message  | text       | null: false                    |
+| hashname | text       | null: false                    |
+| user_id  | references | null: false, foreign_key: true |
 
 ### Association
   has_many :tweet_tag_relations, dependent: :destroy
   has_many :tags, through: :tweet_tag_relations
   has_one_attached :image
+  belongs_to :user
+  has_many :comments
 
 ### tags テーブル
 | Column   | Type   | Options                       |
@@ -75,6 +80,34 @@
 ### Association
   belongs_to :tweet
   belongs_to :tag
+
+### users テーブル
+| Column          | Type     | Options     |
+| --------------- | -------  | ----------- |
+| nickname        | string   | null: false |
+| email           | string   | null: false |
+| password        | string   | null: false |
+| restaurant_name | string   |             |
+| postal_code     | string   |             |
+| prefecture_id   | integer  |             |
+| city            | string   |             |
+| address         | string   |             |
+| phone_number    | string   |             |
+
+### Association
+  has_many :tweets
+  has_many :comments
+
+### comments テーブル
+| Column   | Type       | Options  |
+| -------- | ---------  | -------- |
+| text     | text       |          |
+| tweet_id | references |          |
+| user_id  | references |          |
+
+### Association
+  belongs_to :tweet
+  belongs_to :user
 
 ## :mag: Install
 
