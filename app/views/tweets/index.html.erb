@@ -1,28 +1,13 @@
+<%= render "shared/header"%>
+
 <div class="main">
+<%= render "shared/second-header"%>
 
-<div class='title-contents'>
-    <h2 class='service-title'>
-      Meshitero！
-    </h2>
-    <p class='service-explain'>
-     外食時に出会った「美味しそう！」なものをひたすら紹介するアプリです
-    </p>
-    <p class='service-explain'>
-      コンセプト：たった1枚の画像で、レストランをPRするシンプルなグルメサイトです。<br>自分のお店の自慢の料理を、また自分の大好きなグルメの魅力を、1枚の画像でアピールしてみませんか？
-    </p>
-</div>
-
-<div class="top">
-
-    <div class="top1">
+  <div class="top">
     <h1>投稿一覧</h1>
         <div class="card-wrapper">
-        <%#= link_to @tweets, tweets_path(tweet.id), method: :get do %>
          <%= render partial: 'tweet', locals: {tweet: @tweet} %>
-        <%# end %>
         </div>
-    </div>
+  </div>
 </div>
-
-
-</div>
+<%= render "shared/footer" %>

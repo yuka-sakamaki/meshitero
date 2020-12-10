@@ -1,0 +1,18 @@
+.footer {
+  width: 100vw;
+  padding: 5vh 0;
+  color: grey;
+  background-color: #FFF;
+  text-align: center;
+}
+
+.footer-logo {
+  width: 20vh;
+  height: 10vh;
+  vertical-align: bottom;
+}
+
+.copyright {
+  font-size: 14px;
+  padding-top: 10px;
+}

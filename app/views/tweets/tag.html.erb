@@ -1,22 +1,12 @@
+<%= render "shared/header"%>
 <div class="main">
+  <div class="top">
     <div class="form-wrapper">
       <h2 class="page-heading">
-        <%= @tag.name%>の投稿一覧
+        #<%= @tag.name%>の投稿一覧
       </h2>
-      <% @tweets.each do |tweet|%>
-    <div class="card">
-      <div class="card-image">
-        <%= link_to image_tag(tweet.image), tweet_path(tweet.id) if tweet.image.attached? %>
-      </div>
-      <p class="card-summary"> 
-      <%= tweet.message %>
-      </p>
-        <ul class="tag">
-          <li class="tag-list">
-            <%= render_with_tags(tweet.hashname) %>
-          </li>
-        </ul>
+      <%= render partial: 'tweet', locals: {tweet: @tweet} %>
     </div>
-     <%end%>
-    </div>
+  </div>
 </div>
+<%= render "shared/footer" %>

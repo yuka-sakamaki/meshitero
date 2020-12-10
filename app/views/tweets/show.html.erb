@@ -1,25 +1,27 @@
+<%= render "shared/header"%>
 <div class="main">
-    <div class="tweet-wrapper">
-      <div class="tweet-image">
-        <%= image_tag @tweet.image %>
-      </div>
-      <div class="tweet-body">
-        <div class="tweet-detail">
-          <p class="detail-message">
-            <%= @tweet.message %>
-          </p>
+  <div class="top">
+      <h2 class="page-heading">投稿詳細</h2>
+
+        <div class="tweet-manage">
+          <%= link_to "編集する", edit_tweet_path(@tweet.id), class: "tweet-btn" %>
+          <%= link_to "削除する", tweet_path(@tweet.id),method: :delete, class: "tweet-btn" %>
         </div>
-        <div class="tweet-detail">
-          <p class="detail-message">
-            <% @tweet.tags.each do |tag| %>
-              #<%=tag.name%>
-            <%end%>
-          </p>
-        </div>
+        
+    <div class="card">
+      <div class="card-image">
+        <%= link_to image_tag(@tweet.image), tweet_path(@tweet.id) if @tweet.image.attached? %>
       </div>
-              <div class="tweet-manage">
-               <%= link_to "編集する", edit_tweet_path(@tweet.id), class: "tweet-btn" %>
-               <%= link_to "削除する", tweet_path(@tweet.id),method: :delete, class: "tweet-btn" %>
-              </div>
+      <p class="card-summary"> 
+      <%= @tweet.message %>
+      </p>
+        <ul class="tag">
+          <li class="tag-list">
+            <%= render_with_tags(@tweet.hashname) %>
+          </li>
+        </ul>
     </div>
+    </div>
+  </div>
 </div>
+<%= render "shared/footer" %>

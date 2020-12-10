@@ -1,5 +1,3 @@
-# README
-
 # Meshitero
 <!-- ![meshitero](.images/logo.png) -->
 

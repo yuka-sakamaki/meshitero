@@ -11,23 +11,7 @@
 
   <body>
 
-<header class="header">
-  <div class ="nav">
-      <div class="nav-left">
-           <h1 class="grid-6"><a href="/">Meshitero</a></h1>
-      </div>
+  <%= yield %>
 
-      <div class="nav-right">
-          <%= link_to "投稿する", new_tweet_path, class: "post-btn" %>
-      </div>
-
-  </div>
-</header>
-<div class="main">
-    <%= yield %>
-</div>
-  <div class="footer">
-    <p class="copyright">Copyright © Meshitero All rights reserved.</p>
-  </div>
   </body>
 </html>

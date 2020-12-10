@@ -1,6 +1,10 @@
+<%= render "shared/header"%>
 <div class="main">
+  <div  class="top">
     <div class="form-wrapper">
       <h2 class="page-heading">新規グルメ投稿</h2>
       <%= render partial: "form", locals: { tweet: @tweet } %>
     </div>
+  </div>
 </div>
+<%= render "shared/footer" %>

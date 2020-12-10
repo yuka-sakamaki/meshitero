@@ -32,67 +32,6 @@ a {
   color: #3b4043;
 }
 
-/* ヘッダー */
-
-header {
-  width: 100%;
-  padding: 10px 4% 5px;
-  background-color:rgb(235, 201, 91);
-  position: fixed;
-  top: 0;
-  display: flex;
-  align-items: center;
-}
-h1 {
-  margin:0;padding:0;
-  font-size:20px;
-}
-
-.nav {
-  display: flex;
-}
-
-.nav-right {
-  margin: 0 0 0 auto;
-  display: flex;
-}
-
-
-.post-btn{
-  display: inline-block;
-  padding: 0.4em 1.6em;
-  font-size: 0.8em;
-  color: tomato;
-  text-decoration: none;
-  user-select: none;
-  border: 1px tomato solid;
-  border-radius: 3px;
-  transition: 0.4s ease;
-}
-
-.post-btn:hover {
-  background: tomato;
-  color: #fff;
-}
-
-
-/* ヘッダー２ */
-
-.title-contents {
-  width: 100vw;
-  height: 60vh;
-  background-image: image-url('header01.JPG');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 5vh 15vw;
-  color: #fff;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
-}
 
 
 /* ツイート */
@@ -103,42 +42,44 @@ h1 {
   background-image: url("restaurant-icon.png");
   background-blend-mode:lighten;
   background-repeat: space;
-  display: flex;
-  flex-direction: column;
 }
 
 .top {
-  display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
+  width: 614px;
+  margin: 0 auto;
 }
 
-.top2 {
-  display: flex;
-  justify-content: space-evenly;
+.top h1 {
+  align-items: center;
+  margin: 20px 0;
+  font-weight: bold;
 }
+
 
 .card-wrapper{
-  width: 60%;
-  height: 80%;
-  background-color: white;
-  overflow: auto;
-  display: inline-block;
-  justify-content: center;
-}
-
-.card{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
-  width: 100%;
-  height: 100%;
-  margin-top: 10px;
-  padding: 0 20px;
+  min-height: calc(100vh - 161px);
+  overflow: auto;
+}
+
+.card {
+  width: 614px;
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(41, 41, 41, 0.2); 
+  margin-bottom: 40px;
+  background-color: whitesmoke;
 }
 
 
-.card-title {
+.card-summary {
   display: block;
   font-size: 20px;
-  margin-bottom: 8px;
+  margin-bottom: 20px;
+  padding-left: 15px;
   font-weight: bold;
 }
 
@@ -151,24 +92,15 @@ h1 {
 }
 
 .card-image {
-  border-top: solid 2px gray;
-  padding-top: 10px;
-}
-
-
-div.card div.card-summary{
-  display: block;
-  font-size: 20px;
-  margin-bottom: 8px;
-  font-weight: bold;
+  margin: 0 auto;
 }
 
 .tag-list {
   display: block;
-  font-size: 12px;
+  font-size: 15px;
   color: #999;
-  text-align: right;
-  text-decoration: underline;
+  padding-left: 15px;
+  text-align: left;
 }
 
 /*投稿フォーム*/
@@ -235,34 +167,17 @@ div.card div.card-summary{
 }
 
 /* 詳細ページ */
-.tweet-wrapper{
-  min-height: calc(100vh - 161px);
-  font-size: 16px;
-  text-align: center;
-}
-
-.tweet-image {
-  width: 40%;
-  margin: 0 auto;
-  padding: 16px 0;
-}
-
-.tweet-detail{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
 
 .tweet-manage {
   display: flex;
   justify-content: center;
-  padding-top: 20px;
+  padding: 20px;
 }
 
 .tweet-btn{
   display: block;
-  padding: 0.4em 1.6em;
-  font-size: 0.4em;
+  padding: 0.7em 1.8em;
+  font-size: 0.7em;
   color: tomato;
   text-decoration: none;
   user-select: none;
@@ -278,18 +193,3 @@ div.card div.card-summary{
 }
 
 
-
-/* フッダー */
-
-.footer {
-  width: 100%;
-  background-color: rgb(235, 201, 91);
-  padding: 3vh 0;
-  position: fixed;
-}
-
-.copyright {
-  text-align: center;
-  color: #fff;
-  font-size: 10px;
-}
