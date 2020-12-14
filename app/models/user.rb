@@ -4,14 +4,28 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-has_many :tweets
+  has_many :tweets
+  has_many :comments
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :prefecture
 
   validates :nickname, presence: true
   validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i }
-  # validates :postal_code, format: { with: /\A[0-9]{3} - [0-9]{4}\z/ }
-  validates :prefecture_id, numericality: { other_than: 0 }
-  validates :phone_number, format: { with: /\A\d{11}\z/ }
+  # validates :prefecture_id, numericality: { other_than: 0 }
+  # validates :phone_number, format: { with: /\A\d{11}\z/ }
+
+  def update_without_current_password(params, *options)
+    params.delete(:current_password)
+
+    if params[:password].blank? && params[:password_confirmation].blank?
+      params.delete(:password)
+      params.delete(:password_confirmation)
+    end
+
+   result = update_attributes(params, *options)
+    clean_up_passwords
+    result
+  end
+
 end

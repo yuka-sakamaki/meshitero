@@ -1,45 +1,68 @@
 <%= render "shared/header"%>
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+<div class="main">
+  <div  class="top">
+    <div class="form-wrapper">
+      <h2 class="page-heading">ユーザー情報</h2>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= form_with model: @user, url: user_registration_path, local: true do |f| %>
+    <%= render "devise/shared/error_messages", model: f.object %>
+
+    <div class="form-wrap">
+
+    <div class="field">
+      <%= f.label :nickname, "ニックネーム" %><br />
+      <%= f.text_field :nickname, class:"form-text", autofocus: true %>
+    </div>
+
+    <div class="field">
+      <%= f.label :email, "メールアドレス" %><br />
+      <%= f.email_field :email, class:"form-text", autofocus: true %>
+    </div>
+ 
+    <div class="field">
+      <%= f.label :restaurant_name, "お勤めのレストラン名(任意)" %><br />
+      <%= f.text_field :restaurant_name, class:"form-text", autofocus: true %>
+    </div>
+
+    <div class="field">
+      <%= f.label :postal_code, "お勤めのレストランの郵便番号(任意) 例:123−4567" %><br />
+      <%= f.text_field :postal_code, class:"form-text", autofocus: true %>
+    </div>
+
+
+    <div class="field">
+      <%= f.label :prefecture, "お勤めのレストランの都道府県(任意)" %><br />
+      <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {include_blank: "--"}, {class:"form-text"}) %>
+    </div>
+
+    <div class="field">
+      <%= f.label :city, "お勤めのレストランの市町村(任意)" %><br />
+      <%= f.text_field :city, class:"form-text", autofocus: true %>
+    </div>
+
+    <div class="field">
+      <%= f.label :address, "お勤めのレストランの番地(任意)" %><br />
+      <%= f.text_field :address, class:"form-text", autofocus: true %>
+    </div>
+
+    <div class="field">
+      <%= f.label :phone_number, "お勤めのレストランの電話番号(任意) 例:0312345678", maxlength:"11" %><br />
+      <%= f.text_field :phone_number, class:"form-text", autofocus: true %>
+    </div>
+
+
+    <div class="actions">
+      <%= f.submit "登録する", class: "form-btn" %>
+     </div> 
+
+       </div>
+     <% end %>
+    </div>
   </div>
+</div>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-    <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
-    <% end %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "current-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Update" %>
-  </div>
-<% end %>
-
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+<%#= button_to "アカウントを削除する", registration_path(resource_name), data: { confirm: "本当に削除しますか？" }, method: :delete %>
 
 <%#= link_to "Back", :back %>
 <%= render "shared/footer" %>

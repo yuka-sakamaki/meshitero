@@ -20,6 +20,8 @@ class TweetsController < ApplicationController
   end
 
   def show
+    @comment = Comment.new
+    @comments = @tweet.comments.includes(:user)
   end
 
   def edit
@@ -37,16 +39,16 @@ class TweetsController < ApplicationController
     redirect_to root_path if @tweet.destroy
   end
 
-  def search
-    return nil if params[:keyword] == ""
-    tag = Tag.where(['name LIKE ?', "%#{params[:keyword]}%"] )
-    render json:{ keyword: tag }
-  end
+  # def search
+  #   return nil if params[:keyword] == ""
+  #   tag = Tag.where(['name LIKE ?', "%#{params[:keyword]}%"] )
+  #   render json:{ keyword: tag }
+  # end
 
 
   def tag
     @tag = Tag.find_by(name: params[:name])
-    @tweets = @tag.tweets
+    @tweets = @tag.tweets.distinct.order(created_at: :desc)
   end
 
 

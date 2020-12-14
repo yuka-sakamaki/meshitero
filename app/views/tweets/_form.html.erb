@@ -14,8 +14,8 @@
     </div>
 
     <div class="field">
-      <p>タグを入力してください</p>
-      <%= f.text_field :hashname, class:"form-text", id:'tag-field' %>
+      <p>タグを入力してください(文字の先頭に#をつけてください)</p>
+      <%= f.text_field :hashname, class:"form-text", id:'tag-field', placeholder:'複数入力する場合は半角スペースを開けてください' %>
 
     <div id="search-result">
     </div>

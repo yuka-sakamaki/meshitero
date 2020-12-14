@@ -1,17 +1,19 @@
 <%= render "shared/header"%>
 <div class="main">
   <div class="top">
-      <h2 class="page-heading">投稿詳細</h2>
-      <% if current_user.id == @tweet.user_id %>
-        <div class="tweet-manage">
-          <%= link_to "編集する", edit_tweet_path(@tweet.id), class: "tweet-btn" %>
-          <%= link_to "削除する", tweet_path(@tweet.id),method: :delete, class: "tweet-btn" %>
-        </div>
+      <h2 class="page-heading">投稿詳細ページ</h2>
+
+      <% if user_signed_in? %>
+        <% if current_user.id == @tweet.user_id %>
+          <div class="tweet-manage">
+            <%= link_to "編集する", edit_tweet_path(@tweet.id), class: "tweet-btn" %>
+            <%= link_to "削除する", tweet_path(@tweet.id),method: :delete, class: "tweet-btn" %>
+          </div>
+        <% end %>
       <% end %>
+
     <div class="card">
-
      <%= link_to "#{@tweet.user.nickname}", user_path(@tweet.user.id), class:"card-user" %>
-
       <div class="card-image">
         <%= link_to image_tag(@tweet.image), tweet_path(@tweet.id) if @tweet.image.attached? %>
       </div>
@@ -23,8 +25,11 @@
             <%= render_with_tags(@tweet.hashname) %>
           </li>
         </ul>
+      </div>
     </div>
-    </div>
+
+   <%= render partial: "comment", locals: {tweet: @tweet} %>
+
   </div>
 </div>
 <%= render "shared/footer" %>

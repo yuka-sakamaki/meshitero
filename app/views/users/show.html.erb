@@ -1,6 +1,50 @@
 <%= render "shared/header"%>
 <div class="main">
   <div class="top">
+
+    <h2 class="page-heading">
+      <%= @user.nickname %>さんの情報
+    </h2>
+    
+    <% if user_signed_in? %>
+      <% if current_user.id == @user.id %>
+      <%= link_to 'アカウント情報の変更はこちら', edit_user_registration_path, class: "post-btn" %>
+      <% end %>
+    <% end %>
+
+      <table class="table">
+        <tbody>
+          <tr>
+            <th class="table__col1">ニックネーム：</th>
+            <td class="table__col2"><%= @user.nickname %></td>
+          </tr>
+          <tr>
+            <th class="table__col1">レストラン名：</th>
+            <td class="table__col2"><%= @user.restaurant_name %></td>
+          </tr>
+          <tr>
+            <th class="table__col1">郵便番号：</th>
+            <td class="table__col2"><%= @user.postal_code %></td>
+          </tr>
+          <tr>
+            <th class="table__col1">都道府県：</th>
+            <td class="table__col2"><%= @user.prefecture.name %></td>
+          </tr>
+          <tr>
+            <th class="table__col1">市町村：</th>
+            <td class="table__col2"><%= @user.city %></td>
+          </tr>
+          <tr>
+            <th class="table__col1">番地：</th>
+            <td class="table__col2"><%= @user.address %></td>
+          </tr>
+          <tr>
+            <th class="table__col1">電話番号：</th>
+            <td class="table__col2"><%= @user.phone_number %></td>
+          </tr>
+        </tbody>
+      </table>
+
     <div class="form-wrapper">
       <h2 class="page-heading">
         <%= @nickname %>さんの投稿一覧
