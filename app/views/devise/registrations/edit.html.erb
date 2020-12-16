@@ -5,7 +5,8 @@
     <div class="form-wrapper">
       <h2 class="page-heading">ユーザー情報</h2>
 
-    <%= form_with model: @user, url: user_registration_path, local: true do |f| %>
+    <%= form_with model: @user, url: user_registration_path, method: :patch, local: true do |f| %>
+    <%#= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
     <%= render "devise/shared/error_messages", model: f.object %>
 
     <div class="form-wrap">
@@ -19,7 +20,17 @@
       <%= f.label :email, "メールアドレス" %><br />
       <%= f.email_field :email, class:"form-text", autofocus: true %>
     </div>
- 
+
+   <div class="field">
+      <%= f.label :password, "パスワード(登録しているパスワードを入力してください)" %><br />
+      <%= f.password_field :password, class:"form-text" %>
+   </div>
+
+    <div class="field">
+      <%= f.label :password_confirmation, "パスワード(確認用)"%><br />
+      <%= f.password_field :password_confirmation, class:"form-text" %>
+    </div>
+
     <div class="field">
       <%= f.label :restaurant_name, "お勤めのレストラン名(任意)" %><br />
       <%= f.text_field :restaurant_name, class:"form-text", autofocus: true %>
@@ -51,6 +62,11 @@
       <%= f.text_field :phone_number, class:"form-text", autofocus: true %>
     </div>
 
+
+     <div class="field">
+    <%= f.label :current_password, "確認のため、再度登録しているパスワードを入力してください" %><br />
+    <%= f.password_field :current_password, autocomplete: "current-password", class:"form-text" %>
+    </div>
 
     <div class="actions">
       <%= f.submit "登録する", class: "form-btn" %>
