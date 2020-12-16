@@ -45,7 +45,7 @@
 
     <div class="field">
       <%= f.label :prefecture, "お勤めのレストランの都道府県(任意)" %><br />
-      <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {include_blank: "--"}, {class:"form-text"}), autofocus: true %>
+      <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {include_blank: "--"}, {class:"form-text"}) %>
     </div>
 
     <div class="field">

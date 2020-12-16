@@ -13,20 +13,20 @@ class User < ApplicationRecord
 
   validates :nickname, presence: true
   validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i }
-  # validates :prefecture_id, numericality: { other_than: 0 }
-  # validates :phone_number, format: { with: /\A\d{11}\z/ }
+  validates :postal_code, format: { with: /\A\d{3}[-]\d{4}\z/ }
 
-  def update_without_current_password(params, *options)
-    params.delete(:current_password)
 
-    if params[:password].blank? && params[:password_confirmation].blank?
-      params.delete(:password)
-      params.delete(:password_confirmation)
-    end
+  # def update_without_current_password(params, *options)
+  #   params.delete(:current_password)
 
-    result = update_attributes(params, *options)
-    clean_up_passwords
-    result
-  end
+  #   if params[:password].blank? && params[:password_confirmation].blank?
+  #     params.delete(:password)
+  #     params.delete(:password_confirmation)
+  #   end
+
+  #   result = update_attributes(params, *options)
+  #   clean_up_passwords
+  #   result
+  # end
 
 end
