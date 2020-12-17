@@ -61,3 +61,4 @@ gem 'pry-rails'
 gem 'devise'
 gem 'active_hash'
 gem 'rename'
+gem "aws-sdk-s3", require: false

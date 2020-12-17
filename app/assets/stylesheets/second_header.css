@@ -1,7 +1,7 @@
 /* ヘッダー２ */
 
 .title-img {
-  background-image: url("/Users/yuka/projects/meshitero/app/assets/images/sara.jpg");
+  background-image: url("/Users/yuka/projects/meshitero/app/public/images/sara.jpg");
   width: 100vw;
   height: 60vh;
   background-size: cover;
