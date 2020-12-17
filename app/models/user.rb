@@ -13,7 +13,7 @@ class User < ApplicationRecord
 
   validates :nickname, presence: true
   validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i }
-  validates :postal_code, format: { with: /\A\d{3}[-]\d{4}\z/ }
+  validates :postal_code, allow_blank: true, format: { with: /\A\d{3}[-]\d{4}\z/ }
 
 
   # def update_without_current_password(params, *options)

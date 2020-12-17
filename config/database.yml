@@ -19,14 +19,14 @@ default: &default
 
 development:
   <<: *default
-  database: meshitero_development
+  database: meshitero31632_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: meshitero_test
+  database: meshitero31632_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: meshitero_production
-  username: meshitero
-  password: <%= ENV['MESHITERO_DATABASE_PASSWORD'] %>
+  database: meshitero31632_production
+  username: meshitero31632
+  password: <%= ENV['meshitero31632_DATABASE_PASSWORD'] %>
