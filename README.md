@@ -6,10 +6,14 @@
   - This app is a posting site dedicated to gourmet images. Whether you work in a restaurant or a gourmet lover, why not promote the charm of the restaurant with a single image?</br>(このアプリはグルメ画像専用の投稿サイトです。レストランで働くあなた、またはグルメ好きなあなたが、1枚の画像でお店の魅力をPRしてみませんか？)
 
 ## :globe_with_meridians: URL
+https://meshitero31632.herokuapp.com/
 
-## :key: Accounts 
-  <!-- email: test@test
-  pass:  test1234 -->
+## :key: Accounts
+ID: admin
+Pass: 2222
+※テスト用アカウント
+  email: abc@def
+  pass:  abcd1234
 
 ## :hand: Usage
   - First, create a user account. If you work at a restaurant, don't forget to enter the restaurant information.</br>（まずはユーザーアカウントを作成してください。レストランで働いている方はレストラン情報の入力もお忘れなく。）
@@ -40,7 +44,7 @@
 
 ## :wrench: Functions
 
-<!-- ![タグ付け機能]() -->
+https://docs.google.com/presentation/d/1uJdP6JfVh3WkuopFnYVtHbiPd_IoRs8RhnDeTdxOxpQ/edit?usp=sharing
 
 ## :package: Database
 
