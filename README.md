@@ -9,11 +9,12 @@
 https://meshitero31632.herokuapp.com/
 
 ## :key: Accounts
-ID: admin
-Pass: 2222
-※テスト用アカウント
-  email: abc@def
-  pass:  abcd1234
+ID: admin</br>
+Pass: 2222</br>
+
+※テスト用アカウント</br>
+  email: abc@def</br>
+  pass:  abcd1234</br>
 
 ## :hand: Usage
   - First, create a user account. If you work at a restaurant, don't forget to enter the restaurant information.</br>（まずはユーザーアカウントを作成してください。レストランで働いている方はレストラン情報の入力もお忘れなく。）
@@ -111,7 +112,7 @@ https://docs.google.com/presentation/d/1uJdP6JfVh3WkuopFnYVtHbiPd_IoRs8RhnDeTdxO
 
 ## :mag: Install
 
-  % git clone https://github.com/yuka-sakamaki/meshitero.git
+  % git clone https://github.com/yuka-sakamaki/meshitero31632.git
 
 ## :books: Version
 - Ruby/Ruby on Rails/JavaScript/MySQL/Github/AWS/Visual Studio Code
@@ -120,6 +121,8 @@ https://docs.google.com/presentation/d/1uJdP6JfVh3WkuopFnYVtHbiPd_IoRs8RhnDeTdxO
 * gem 3.0.3
 * git version 2.24.3
 * mysql  Ver 14.14 Distrib 5.6.50
+* heroku/7.47.4 darwin-x64 node-v12.16.2
+* AWS S3
 
 
 
