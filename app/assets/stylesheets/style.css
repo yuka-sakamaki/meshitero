@@ -39,7 +39,7 @@ a {
 .main{
   width: 100%;
   background-color: #f8f8f8f8;
-  background-image: image-url("restaurant-icon.png");
+  background-image: url("restaurant-icon.png");
   background-blend-mode:lighten;
   background-repeat: space;
 }
