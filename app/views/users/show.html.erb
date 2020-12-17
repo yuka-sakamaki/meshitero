@@ -28,7 +28,7 @@
           </tr>
           <tr>
             <th class="table__col1">都道府県：</th>
-            <td class="table__col2"><%= @user.prefecture.name %></td>
+            <td class="table__col2"><%= @user.prefecture.name if @user.prefecture_id %></td>
           </tr>
           <tr>
             <th class="table__col1">市町村：</th>
