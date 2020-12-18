@@ -36,13 +36,6 @@ a {
 
 /* ツイート */
 
-.main{
-  width: 100%;
-  background-color: #f8f8f8f8;
-  background-image: url("restaurant-icon.png");
-  background-blend-mode:lighten;
-  background-repeat: space;
-}
 
 .top {
   flex-direction: column;
