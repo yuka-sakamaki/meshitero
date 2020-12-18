@@ -1,8 +1,8 @@
-# Meshitero31632
+# Meshitero
 ![meshitero](app/assets/images/logo.png)
 
 ## :fork_and_knife: Description
-  - Meshitero31632(飯テロ)
+  - Meshitero(飯テロ)
   - This app is a posting site dedicated to gourmet images. Whether you work in a restaurant or a gourmet lover, why not promote the charm of the restaurant with a single image?</br>(このアプリはグルメ画像専用の投稿サイトです。レストランで働くあなた、またはグルメ好きなあなたが、1枚の画像でお店の魅力をPRしてみませんか？)
 
 ## :globe_with_meridians: URL
