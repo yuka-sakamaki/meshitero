@@ -50,7 +50,10 @@ Pass: 2222</br>
   email: meshitero_test@test
   password:  meshitero123
 ```
-  
+</br>
+※ログイン前ユーザーは以下の機能のみ使用できます</br>
+1. TOPページ（投稿一覧）の閲覧</br>
+2. 投稿詳細ページの閲覧</br>
 
 
 ### ローカル環境のセットアップ方法
