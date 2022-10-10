@@ -1,14 +1,60 @@
-# Meshitero
+# 「Meshitero」
 ![meshitero](app/assets/images/logo.png)
+### サービス概要
+グルメ画像専用の投稿サイトです。普段何気なく撮ったグルメの画像を共有することで、お店の魅力をPRすることができます。
 
-## :fork_and_knife: Description
-  - Meshitero(飯テロ)
-  - This app is a posting site dedicated to gourmet images. Whether you work in a restaurant or a gourmet lover, why not promote the charm of the restaurant with a single image?</br>(このアプリはグルメ画像専用の投稿サイトです。レストランで働くあなた、またはグルメ好きなあなたが、1枚の画像でお店の魅力をPRしてみませんか？)
+### 登場人物
+- 自分のおすすめのレストランを広く知ってもらいたい方(グルメ好きユーザー)
+- レストラン経営者の方(レストランユーザー)
 
-## :globe_with_meridians: URL
+### ユーザーが抱える課題
+(グルメ好きユーザー)</br>
+- お店を探すときに、口コミや他社の評価など情報が多すぎる
+- ネガティブな情報に惑わされてしまい、新しいお店に行く機会を損失している
+</br>
+
+(レストランユーザー)
+
+- 食べログやぐるなびでネガティブな口コミが掲載されてしまっているとお店のファンが作りにくい
+- クーポンがきっかけで来店するお客はリピーターに繋がりにくい
+  
+### 解決方法と望む未来
+(グルメ好きユーザー)
+
+* 1枚のグルメ画像を元にレストランを探す　→新しいレストラン探しの機会創出
+* 自分が大好きなレストランを他のユーザーにおすすめできる →レストランを間接的に応援することができる
+</br>
+
+(レストランユーザー)
+
+* 自慢の料理画像1枚でお店をPRできる　→グルメ好きなユーザーに向けて積極的に情報発信することができる 
+* 料理画像をきっかけに来店するユーザーが増える →純粋なお店のファンを増やすことができる
+
+##### :fork_and_knife:　お店とグルメ好きをつなぐプラットフォームサービスを目指しています。
+
+### サービスを作った背景
+前々職で、飲食店へ送客を促すためのクーポンを提供してもらう営業を行なっておりました。クーポンやお得感をきっかけに来店された方はリピーターに繋がりにくく、それではお店のファンが作りにくいと感じていました。レストランの料理が目当てで来店した方は、その味が気に入ればリピーターになってもらう確率は上がると思いました。
+また私自身も飲食店を探す際に、少しでもネガティブな情報があると行きにくくなってしまうことがよくあります。前評判は悪くても、実際に行ってみたら自分の好きな味でお店のファンになった!という経験は誰しもがある経験だと思います。たった1枚の画像から「美味しそう」という感性だけを頼りにレストラン探しをする機会を作りたいと思い、本アプリケーションを作成しました。
+
+### 主な機能
+
+* ユーザー未登録の状態でも投稿内容の詳細は閲覧可能です
+
+https://user-images.githubusercontent.com/69895997/194793601-df874d96-58f0-4cad-a726-a8e745f0474e.mp4
+
+* ログイン済みユーザーは投稿内容を作成することができます
+
+https://user-images.githubusercontent.com/69895997/194794013-d22749a5-6a87-4e6d-9da3-d4938ff2df61.mp4
+
+* タグをクリックすると、同じタグがついた投稿をまとめて閲覧することができます
+
+https://user-images.githubusercontent.com/69895997/194794344-8f5d6241-67fd-4d6d-a527-77b0abc28761.mp4
+
+
+# :globe_with_meridians: URL
 https://meshitero31632.herokuapp.com/
 
-## :key: Accounts
+### :key: Accounts
 ID: admin</br>
 Pass: 2222</br>
 
@@ -16,17 +62,21 @@ Pass: 2222</br>
   email: abc@def</br>
   pass:  abcd1234</br>
 
-## :hand: Usage
-  - First, create a user account. If you work at a restaurant, don't forget to enter the restaurant information.</br>（まずはユーザーアカウントを作成してください。レストランで働いている方はレストラン情報の入力もお忘れなく。）
-  - You can browse the contents posted by other users on the top page.</br> (TOPページでは他のユーザーが投稿した内容を閲覧することができます。)
-  - You can move to the post details page by clicking the posted image and leave a comment. (投稿された画像をクリックすると投稿詳細ページに遷移でき、コメントを残すことができます。)
-  - Click the post button to move to the new post form. Please enter the image, comment and tag information.</br> (投稿ボタンをクリックすると、新規投稿フォームに遷移します。画像とコメント、タグの情報を入力してください。)
 
-## :bulb: Solution
-  - The purpose of this app is to increase the number of fans in your restaurants without using coupons or discount plans. By communicating the charm of the restaurant with a single image, you can promote the restaurant without someone's ratings and reviews.</br>(クーポンや割引プランを使わずにお店のファンを増やすこと、それがこのアプリの目的です。レストランの魅力を1枚の画像で伝えることで、口コミや評価に頼ることなくレストランをPRできます。)
-  - Please use it when looking for a restaurant.You will find the restaurant you really want to go to.</br>（あなた自身がレストランを探す際にご活用ください。きっとあなたが本当に行きたいレストランが見つかるはずです。）
+### ローカル環境のセットアップ方法
+```
+git clone https://github.com/yuka-sakamaki/meshitero31632.git
+```
+```
+bundle install
+```
+```
+#起動コマンド
+rails s
+```
 
-## :page_facing_up: Requirements
+
+# :page_facing_up: Requirements
 
   |機能|理由|詳細|
   |:---|:---|:---|
@@ -43,76 +93,11 @@ Pass: 2222</br>
   |ユーザー情報編集機能|ユーザーが自分が登録したニックネーム、メールアドレス、パスワード、レストラン名（任意）、レストランの住所（任意）、レストランの電話番号（任意）の内容を変更できるようにするため|マイページを閲覧しているユーザーは自分が登録した内容を変更することができる|
   |コメント投稿機能|ユーザーが自分の投稿や他のユーザーの投稿に対してコメントをつけられるようにするため|投稿詳細ページで投稿の下部にコメント入力フォームを設置し、誰がコメントしたかが分かるようにする|
 
-## :wrench: Functions
-
-https://docs.google.com/presentation/d/1uJdP6JfVh3WkuopFnYVtHbiPd_IoRs8RhnDeTdxOxpQ/edit?usp=sharing
 
 ## :package: Database
+<img width="823" alt="スクリーンショット 2022-10-10 12 44 10" src="https://user-images.githubusercontent.com/69895997/194796596-757047e9-4520-4e18-a75a-ff993af6f2cf.png">
 
-### tweets テーブル
-| Column   | Type       | Options                        |
-| -------- | ---------- | ------------------------------ |
-| message  | text       | null: false                    |
-| hashname | text       | null: false                    |
-| user_id  | references | null: false, foreign_key: true |
 
-### Association
-  has_many :tweet_tag_relations, dependent: :destroy
-  has_many :tags, through: :tweet_tag_relations
-  has_one_attached :image
-  belongs_to :user
-  has_many :comments
-
-### tags テーブル
-| Column   | Type   | Options                       |
-| -------- | ------ | ----------------------------- |
-| name     | string | null: false, uniqueness: true |
-
-### Association
-  has_many :tweet_tag_relations, dependent: :destroy
-  has_many :tweets, through: :tweet_tag_relations
-
-### tweet_tag_relations テーブル
-| Column   | Type       | Options                        |
-| -------- | ---------  | ------------------------------ |
-| tweet    | references | null: false, foreign_key: true |
-| tag      | references | null: false, foreign_key: true |
-
-### Association
-  belongs_to :tweet
-  belongs_to :tag
-
-### users テーブル
-| Column          | Type     | Options     |
-| --------------- | -------  | ----------- |
-| nickname        | string   | null: false |
-| email           | string   | null: false |
-| password        | string   | null: false |
-| restaurant_name | string   |             |
-| postal_code     | string   |             |
-| prefecture_id   | integer  |             |
-| city            | string   |             |
-| address         | string   |             |
-| phone_number    | string   |             |
-
-### Association
-  has_many :tweets
-  has_many :comments
-
-### comments テーブル
-| Column   | Type       | Options  |
-| -------- | ---------  | -------- |
-| text     | text       |          |
-| tweet_id | references |          |
-| user_id  | references |          |
-
-### Association
-  belongs_to :tweet
-  belongs_to :user
-
-## :mag: Install
-
-  % git clone https://github.com/yuka-sakamaki/meshitero31632.git
 
 ## :books: Version
 - Ruby/Ruby on Rails/JavaScript/MySQL/Github/AWS/Visual Studio Code
@@ -123,14 +108,3 @@ https://docs.google.com/presentation/d/1uJdP6JfVh3WkuopFnYVtHbiPd_IoRs8RhnDeTdxO
 * mysql  Ver 14.14 Distrib 5.6.50
 * heroku/7.47.4 darwin-x64 node-v12.16.2
 * AWS S3
-
-
-
-
-
-
-
-
-
-
-  
