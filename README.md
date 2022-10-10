@@ -45,8 +45,7 @@ https://meshitero31632.herokuapp.com/
 ID: admin</br>
 Pass: 2222</br>
 
-- テスト用アカウント/下記のURLからログインしてください</br>
-- https://meshitero31632.herokuapp.com/users/sign_in
+- 下記のテスト用アカウントを使用し、[こちら](https://meshitero31632.herokuapp.com/users/sign_in)からログインしてください</br>
 ```
   email: meshitero_test@test
   password:  meshitero123
