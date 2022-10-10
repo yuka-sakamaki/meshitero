@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meshitero</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -12,6 +13,12 @@
   <body>
 
   <%= yield %>
+  
+
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+  <script src="like_button.js"></script>
+  <%# 最初のふたつのタグは React を読み込んでおり、最後のタグはこれから書くコンポーネントのコードを読み込んでいます。 %>
 
   </body>
 </html>
