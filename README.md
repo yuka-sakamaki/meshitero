@@ -47,8 +47,11 @@ Pass: 2222</br>
 
 - テスト用アカウント/下記のURLからログインしてください</br>
 - https://meshitero31632.herokuapp.com/users/sign_in
-  email: meshitero_test@test</br>
-  pass:  meshitero123</br>
+```
+  email: meshitero_test@test
+  password:  meshitero123
+```
+  
 
 
 ### ローカル環境のセットアップ方法
