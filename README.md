@@ -50,6 +50,15 @@ https://user-images.githubusercontent.com/69895997/194794344-8f5d6241-67fd-4d6d-
 # :globe_with_meridians: URL
 https://meshitero31632.herokuapp.com/
 
+### :key: Accounts
+ID: admin</br>
+Pass: 2222</br>
+
+※テスト用アカウント</br>
+  email: abc@def</br>
+  pass:  abcd1234</br>
+
+
 ### ローカル環境のセットアップ方法
 ```
 git clone https://github.com/yuka-sakamaki/meshitero31632.git
@@ -61,14 +70,6 @@ bundle install
 #起動コマンド
 rails s
 ```
-
-### :key: Accounts
-ID: admin</br>
-Pass: 2222</br>
-
-※テスト用アカウント</br>
-  email: abc@def</br>
-  pass:  abcd1234</br>
 
 
 # :page_facing_up: Requirements
@@ -103,14 +104,3 @@ Pass: 2222</br>
 * mysql  Ver 14.14 Distrib 5.6.50
 * heroku/7.47.4 darwin-x64 node-v12.16.2
 * AWS S3
-
-
-
-
-
-
-
-
-
-
-  
