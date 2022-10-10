@@ -1,14 +1,43 @@
-# Meshitero
+# 「Meshitero」
 ![meshitero](app/assets/images/logo.png)
+### サービス概要
+グルメ画像専用の投稿サイトです。普段何気なく撮ったグルメの画像を共有することで、お店の魅力をPRすることができます。
 
-## :fork_and_knife: Description
-  - Meshitero(飯テロ)
-  - This app is a posting site dedicated to gourmet images. Whether you work in a restaurant or a gourmet lover, why not promote the charm of the restaurant with a single image?</br>(このアプリはグルメ画像専用の投稿サイトです。レストランで働くあなた、またはグルメ好きなあなたが、1枚の画像でお店の魅力をPRしてみませんか？)
+### 登場人物
+- 自分のおすすめのレストランを広く知ってもらいたい方(グルメ好きユーザー)
+- レストラン経営者の方(レストランユーザー)
 
-## :globe_with_meridians: URL
+### ユーザーが抱える課題
+(グルメ好きユーザー)</br>
+- お店を探すときに、口コミや他社の評価など情報が多すぎる
+- ネガティブな情報に惑わされてしまい、新しいお店に行く機会を損失している
+</br>
+
+(レストランユーザー)
+
+- 食べログやぐるなびでネガティブな口コミが掲載されてしまっているとお店のファンが作りにくい
+- クーポンがきっかけで来店するお客はリピーターに繋がりにくい
+  
+### 解決方法と望む未来
+(グルメ好きユーザー)
+
+* 1枚のグルメ画像を元にレストランを探す　→新しいレストラン探しの機会創出
+* 自分が大好きなレストランを他のユーザーにおすすめできる →レストランを間接的に応援することができる
+</br>
+
+(レストランユーザー)
+
+* 自慢の料理画像1枚でお店をPRできる　→グルメ好きなユーザーに向けて積極的に情報発信することができる 
+* 料理画像をきっかけに来店するユーザーが増える →純粋なお店のファンを増やすことができる
+
+##### :fork_and_knife:　お店とグルメ好きをつなぐプラットフォームサービスを目指しています。
+
+
+
+### :globe_with_meridians: URL
 https://meshitero31632.herokuapp.com/
 
-## :key: Accounts
+### :key: Accounts
 ID: admin</br>
 Pass: 2222</br>
 
