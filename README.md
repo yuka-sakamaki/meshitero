@@ -36,31 +36,19 @@
 前々職で、飲食店へ送客を促すためのクーポンを提供してもらう営業を行なっておりました。クーポンやお得感をきっかけに来店された方はリピーターに繋がりにくく、それではお店のファンが作りにくいと感じていました。レストランの料理が目当てで来店した方は、その味が気に入ればリピーターになってもらう確率は上がると思いました。
 また私自身も飲食店を探す際に、少しでもネガティブな情報があると行きにくくなってしまうことがよくあります。前評判は悪くても、実際に行ってみたら自分の好きな味でお店のファンになった!という経験は誰しもがある経験だと思います。たった1枚の画像から「美味しそう」という感性だけを頼りにレストラン探しをする機会を作りたいと思い、本アプリケーションを作成しました。
 
-### 主な機能
 
-* ユーザー未登録の状態でも投稿内容の詳細は閲覧可能です
-
-https://user-images.githubusercontent.com/69895997/194793601-df874d96-58f0-4cad-a726-a8e745f0474e.mp4
-
-* ログイン済みユーザーは投稿内容を作成することができます
-
-https://user-images.githubusercontent.com/69895997/194794013-d22749a5-6a87-4e6d-9da3-d4938ff2df61.mp4
-
-* タグをクリックすると、同じタグがついた投稿をまとめて閲覧することができます
-
-https://user-images.githubusercontent.com/69895997/194794344-8f5d6241-67fd-4d6d-a527-77b0abc28761.mp4
-
-
-# :globe_with_meridians: URL
+### :globe_with_meridians: URL
 https://meshitero31632.herokuapp.com/
 
 ### :key: Accounts
+- ベーシック認証
 ID: admin</br>
 Pass: 2222</br>
 
-※テスト用アカウント</br>
-  email: abc@def</br>
-  pass:  abcd1234</br>
+- テスト用アカウント/下記のURLからログインしてください</br>
+- https://meshitero31632.herokuapp.com/users/sign_in
+  email: meshitero_test@test</br>
+  pass:  meshitero123</br>
 
 
 ### ローカル環境のセットアップ方法
@@ -75,8 +63,7 @@ bundle install
 rails s
 ```
 
-
-# :page_facing_up: Requirements
+### :page_facing_up: 主な機能
 
   |機能|理由|詳細|
   |:---|:---|:---|
@@ -94,12 +81,12 @@ rails s
   |コメント投稿機能|ユーザーが自分の投稿や他のユーザーの投稿に対してコメントをつけられるようにするため|投稿詳細ページで投稿の下部にコメント入力フォームを設置し、誰がコメントしたかが分かるようにする|
 
 
-## :package: Database
+### :package: Database
 <img width="823" alt="スクリーンショット 2022-10-10 12 44 10" src="https://user-images.githubusercontent.com/69895997/194796596-757047e9-4520-4e18-a75a-ff993af6f2cf.png">
 
 
 
-## :books: Version
+### :books: Version
 - Ruby/Ruby on Rails/JavaScript/MySQL/Github/AWS/Visual Studio Code
 * ruby 2.6.5
 * Rails 6.0.3.4
