@@ -90,67 +90,8 @@ Pass: 2222</br>
 
 
 ## :package: Database
+<img width="823" alt="スクリーンショット 2022-10-10 12 44 10" src="https://user-images.githubusercontent.com/69895997/194796596-757047e9-4520-4e18-a75a-ff993af6f2cf.png">
 
-### tweets テーブル
-| Column   | Type       | Options                        |
-| -------- | ---------- | ------------------------------ |
-| message  | text       | null: false                    |
-| hashname | text       | null: false                    |
-| user_id  | references | null: false, foreign_key: true |
-
-### Association
-  has_many :tweet_tag_relations, dependent: :destroy
-  has_many :tags, through: :tweet_tag_relations
-  has_one_attached :image
-  belongs_to :user
-  has_many :comments
-
-### tags テーブル
-| Column   | Type   | Options                       |
-| -------- | ------ | ----------------------------- |
-| name     | string | null: false, uniqueness: true |
-
-### Association
-  has_many :tweet_tag_relations, dependent: :destroy
-  has_many :tweets, through: :tweet_tag_relations
-
-### tweet_tag_relations テーブル
-| Column   | Type       | Options                        |
-| -------- | ---------  | ------------------------------ |
-| tweet    | references | null: false, foreign_key: true |
-| tag      | references | null: false, foreign_key: true |
-
-### Association
-  belongs_to :tweet
-  belongs_to :tag
-
-### users テーブル
-| Column          | Type     | Options     |
-| --------------- | -------  | ----------- |
-| nickname        | string   | null: false |
-| email           | string   | null: false |
-| password        | string   | null: false |
-| restaurant_name | string   |             |
-| postal_code     | string   |             |
-| prefecture_id   | integer  |             |
-| city            | string   |             |
-| address         | string   |             |
-| phone_number    | string   |             |
-
-### Association
-  has_many :tweets
-  has_many :comments
-
-### comments テーブル
-| Column   | Type       | Options  |
-| -------- | ---------  | -------- |
-| text     | text       |          |
-| tweet_id | references |          |
-| user_id  | references |          |
-
-### Association
-  belongs_to :tweet
-  belongs_to :user
 
 
 ## :books: Version
