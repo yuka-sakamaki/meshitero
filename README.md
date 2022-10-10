@@ -32,10 +32,35 @@
 
 ##### :fork_and_knife:　お店とグルメ好きをつなぐプラットフォームサービスを目指しています。
 
+### 主な機能
+
+* ユーザー未登録の状態でも投稿内容の詳細は閲覧可能です
+
+https://user-images.githubusercontent.com/69895997/194793601-df874d96-58f0-4cad-a726-a8e745f0474e.mp4
+
+* ログイン済みユーザーは投稿内容を作成することができます
+
+https://user-images.githubusercontent.com/69895997/194794013-d22749a5-6a87-4e6d-9da3-d4938ff2df61.mp4
+
+* タグをクリックすると、同じタグがついた投稿をまとめて閲覧することができます
+
+https://user-images.githubusercontent.com/69895997/194794344-8f5d6241-67fd-4d6d-a527-77b0abc28761.mp4
 
 
-### :globe_with_meridians: URL
+# :globe_with_meridians: URL
 https://meshitero31632.herokuapp.com/
+
+### ローカル環境のセットアップ方法
+```
+git clone https://github.com/yuka-sakamaki/meshitero31632.git
+```
+```
+bundle install
+```
+```
+#起動コマンド
+rails s
+```
 
 ### :key: Accounts
 ID: admin</br>
@@ -45,17 +70,8 @@ Pass: 2222</br>
   email: abc@def</br>
   pass:  abcd1234</br>
 
-## :hand: Usage
-  - First, create a user account. If you work at a restaurant, don't forget to enter the restaurant information.</br>（まずはユーザーアカウントを作成してください。レストランで働いている方はレストラン情報の入力もお忘れなく。）
-  - You can browse the contents posted by other users on the top page.</br> (TOPページでは他のユーザーが投稿した内容を閲覧することができます。)
-  - You can move to the post details page by clicking the posted image and leave a comment. (投稿された画像をクリックすると投稿詳細ページに遷移でき、コメントを残すことができます。)
-  - Click the post button to move to the new post form. Please enter the image, comment and tag information.</br> (投稿ボタンをクリックすると、新規投稿フォームに遷移します。画像とコメント、タグの情報を入力してください。)
 
-## :bulb: Solution
-  - The purpose of this app is to increase the number of fans in your restaurants without using coupons or discount plans. By communicating the charm of the restaurant with a single image, you can promote the restaurant without someone's ratings and reviews.</br>(クーポンや割引プランを使わずにお店のファンを増やすこと、それがこのアプリの目的です。レストランの魅力を1枚の画像で伝えることで、口コミや評価に頼ることなくレストランをPRできます。)
-  - Please use it when looking for a restaurant.You will find the restaurant you really want to go to.</br>（あなた自身がレストランを探す際にご活用ください。きっとあなたが本当に行きたいレストランが見つかるはずです。）
-
-## :page_facing_up: Requirements
+# :page_facing_up: Requirements
 
   |機能|理由|詳細|
   |:---|:---|:---|
@@ -72,9 +88,6 @@ Pass: 2222</br>
   |ユーザー情報編集機能|ユーザーが自分が登録したニックネーム、メールアドレス、パスワード、レストラン名（任意）、レストランの住所（任意）、レストランの電話番号（任意）の内容を変更できるようにするため|マイページを閲覧しているユーザーは自分が登録した内容を変更することができる|
   |コメント投稿機能|ユーザーが自分の投稿や他のユーザーの投稿に対してコメントをつけられるようにするため|投稿詳細ページで投稿の下部にコメント入力フォームを設置し、誰がコメントしたかが分かるようにする|
 
-## :wrench: Functions
-
-https://docs.google.com/presentation/d/1uJdP6JfVh3WkuopFnYVtHbiPd_IoRs8RhnDeTdxOxpQ/edit?usp=sharing
 
 ## :package: Database
 
@@ -139,9 +152,6 @@ https://docs.google.com/presentation/d/1uJdP6JfVh3WkuopFnYVtHbiPd_IoRs8RhnDeTdxO
   belongs_to :tweet
   belongs_to :user
 
-## :mag: Install
-
-  % git clone https://github.com/yuka-sakamaki/meshitero31632.git
 
 ## :books: Version
 - Ruby/Ruby on Rails/JavaScript/MySQL/Github/AWS/Visual Studio Code
